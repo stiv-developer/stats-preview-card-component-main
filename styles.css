@@ -1,0 +1,127 @@
+:root{
+    /* ## Colors */
+
+/* ### Primary */
+
+--Very-dark-blue-main-background: hsl(233, 47%, 7%);
+--Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+--Soft-violet-accent: hsl(277, 64%, 61%);
+
+/* ### Neutral */
+
+--White-main-heading-stats: hsl(0, 0%, 100%);
+--Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+
+    background-color: var(--Very-dark-blue-main-background);
+    color: var(--White-main-heading-stats);
+}
+
+.container{
+    padding: 50px 20px;
+}
+
+.card{
+    background-color: var(--Dark-desaturated-blue-card-background);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card .card-header{
+
+}
+
+.card .card-header img{
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    background-color: var(--Soft-violet-accent);
+    /* opacity: 50; */
+    filter: grayscale(100%) sepia(100%) hue-rotate(247deg) saturate(300%) brightness(50%);
+}
+
+.card .card-body{
+    padding: 20px;
+}
+
+.card .card-body h2{
+    font-size: 1.9rem;
+}
+
+.card .card-body h2 span{
+    color: var(--Soft-violet-accent);
+}
+
+.card .card-body p{
+    color: var(--Slightly-transparent-white-stat-headings);
+    line-height: 25px;
+}
+
+.card .card-body .group-card-body{
+
+}
+
+.card .card-body .group-card-body span{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.card .card-body .group-card-body p{
+    margin-top: 0;
+    font-size: 0.7rem;
+    font-weight: 300;
+}
+
+@media only screen and (min-width: 800px) {
+    .container{
+        width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card .card-header{
+        order: 2;
+        width: 500px;
+    }
+    .card .card-header img{
+        height: 100%;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .card .card-body{
+        width: 500px;
+        order: 1;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .card .card-body h2{
+        text-align: start;
+        font-size: 2.5rem;
+    }
+
+    .card .card-body p{
+        text-align: start;
+    }
+    .card .card-body .group-card-body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding-left: 18px; */
+        padding-right: 18px;
+        padding-top: 20px;
+    }
+}
